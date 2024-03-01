@@ -12,3 +12,8 @@ class DataIngestionArtifacts:
 class DataValidationArtifacts:
     """Data Validation Artifacts"""
     result_file_path: str
+    
+@dataclass
+class DataTransformationArtifacts:
+    """Data Transformation Artifacts"""
+    transformed_data_path: str

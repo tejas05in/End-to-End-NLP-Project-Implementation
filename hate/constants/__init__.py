@@ -17,3 +17,13 @@ DATA_INGESTION_RAW_DATA_DIR = "raw_data.csv"
 # Data validation constants
 DATA_VALIDATION_ARTIFACTS_DIR = "DataValidationArtifacts"
 DATA_VALIDATION_FILE_NAME = 'result.txt'
+
+# Data transformation constants
+DATA_TRANSFORMATION_ARTIFACTS_DIR = "DataTransformationArtifacts"
+TRANSFORMED_FILE_NAME = "final.csv"
+DATA_DIR = "data"
+ID = "id"
+AXIS = 1
+INPLACE = True
+DROP_COLUMNS = ['Unnamed: 0','count','hate_speech','offensive_language','neither']
+CLASS = "class"
