@@ -13,3 +13,7 @@ TWEET = 'tweet'
 DATA_INGESTION_ARTIFACTS_DIR = "DataIngestionArtifacts"
 DATA_INGESTION_IMBALANCE_DATA_DIR = "imbalanced_data.csv"
 DATA_INGESTION_RAW_DATA_DIR = "raw_data.csv"
+
+# Data validation constants
+DATA_VALIDATION_ARTIFACTS_DIR = "DataValidationArtifacts"
+DATA_VALIDATION_FILE_NAME = 'result.txt'

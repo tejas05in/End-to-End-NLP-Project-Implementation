@@ -21,3 +21,16 @@ class DataIngestionConfig:
         self.ZIP_FILE_DIR = os.path.join(self.DATA_INGESTION_ARTIFACTS_DIR)
         self.ZIP_FILE_PATH = os.path.join(
             self.DATA_INGESTION_ARTIFACTS_DIR, self.ZIP_FILE_NAME)
+
+
+@dataclass
+class DataValidationConfig:
+    """
+    DataValidationConfig is a dataclass that holds the configuration for data validation.
+    """
+
+    def __init__(self):
+        self.DATA_VALIDATION_ARTIFACTS_DIR: str = os.path.join(
+            os.getcwd(), ARTIFACTS_DIR, DATA_VALIDATION_ARTIFACTS_DIR)
+        self.RESULT_FILE_PATH = os.path.join(
+            self.DATA_VALIDATION_ARTIFACTS_DIR, DATA_VALIDATION_FILE_NAME)
