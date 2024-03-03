@@ -35,15 +35,18 @@ class DataValidationConfig:
         self.RESULT_FILE_PATH = os.path.join(
             self.DATA_VALIDATION_ARTIFACTS_DIR, DATA_VALIDATION_FILE_NAME)
 
+
 @dataclass
 class DataTransformationConfig:
     """
     DataTransformationConfig is a dataclass that holds the configuration for data transformation.
     """
+
     def __init__(self):
         self.DATA_TRANSFORMATION_ARTIFACTS_DIR: str = os.path.join(
             os.getcwd(), ARTIFACTS_DIR, DATA_TRANSFORMATION_ARTIFACTS_DIR)
-        self.TRANSFORMED_FILE_PATH = os.path.join(self.DATA_TRANSFORMATION_ARTIFACTS_DIR, TRANSFORMED_FILE_NAME)
+        self.TRANSFORMED_FILE_PATH = os.path.join(
+            self.DATA_TRANSFORMATION_ARTIFACTS_DIR, TRANSFORMED_FILE_NAME)
         self.ID = ID
         self.AXIS = AXIS
         self.INPLACE = INPLACE
@@ -51,16 +54,21 @@ class DataTransformationConfig:
         self.CLASS = CLASS
         self.LABEL = LABEL
         self.TWEET = TWEET
-        
+
 
 @dataclass
 class ModelTrainerConfig:
     def __init__(self):
-        self.TRINED_MODEL_DIR: str = os.path.join(os.getcwd(), ARTIFACTS_DIR , MODEL_TRAINER_ARTIFACTS_DIR)
-        self.TRINED_MODEL_PATH = os.path.join(self.TRINED_MODEL_DIR, TRAINER_MODEL_NAME)
-        self.X_TEST_DATA_PATH = os.path.join(self.TRINED_MODEL_DIR, X_TEST_FILE_NAME)
-        self.Y_TEST_DATA_PATH = os.path.join(self.TRINED_MODEL_DIR, Y_TEST_FILE_NAME)
-        self.X_TRAIN_DATA_PATH = os.path.join(self.TRINED_MODEL_DIR, X_TRAIN_FILE_NAME)
+        self.TRINED_MODEL_DIR: str = os.path.join(
+            os.getcwd(), ARTIFACTS_DIR, MODEL_TRAINER_ARTIFACTS_DIR)
+        self.TRINED_MODEL_PATH = os.path.join(
+            self.TRINED_MODEL_DIR, TRAINER_MODEL_NAME)
+        self.X_TEST_DATA_PATH = os.path.join(
+            self.TRINED_MODEL_DIR, X_TEST_FILE_NAME)
+        self.Y_TEST_DATA_PATH = os.path.join(
+            self.TRINED_MODEL_DIR, Y_TEST_FILE_NAME)
+        self.X_TRAIN_DATA_PATH = os.path.join(
+            self.TRINED_MODEL_DIR, X_TRAIN_FILE_NAME)
         self.MAX_WORDS = MAX_WORDS
         self.MAX_LEN = MAX_LEN
         self.LOSS = LOSS
@@ -72,3 +80,23 @@ class ModelTrainerConfig:
         self.EPOCH = EPOCH
         self.BATCH_SIZE = BATCH_SIZE
         self.VALIDATION_SPLIT = VALIDATION_SPLIT
+
+
+@dataclass
+class ModelEvaluationConfig:
+    def __init__(self):
+        self.MODEL_EVALUATION_MODEL_DIR: str = os.path.join(
+            os.getcwd(), ARTIFACTS_DIR, MODEL_EVALUATION_ARTIFACTS_DIR)
+        self.BEST_MODEL_DIR_PATH: str = os.path.join(
+            self.MODEL_EVALUATION_MODEL_DIR, BEST_MODEL_DIR)
+        self.BUCKET_NAME = BUCKET_NAME
+        self.MODEL_NAME = MODEL_NAME
+
+
+@dataclass
+class ModelPusherConfig:
+    def __init__(self):
+        self.TRAINED_MODEL_PATH: str = os.path.join(
+            os.getcwd(), ARTIFACTS_DIR, MODEL_TRAINER_ARTIFACTS_DIR)
+        self.BUCKET_NAME = BUCKET_NAME
+        self.MODEL_NAME = MODEL_NAME

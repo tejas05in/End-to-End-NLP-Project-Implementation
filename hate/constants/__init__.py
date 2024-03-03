@@ -25,7 +25,8 @@ DATA_DIR = "data"
 ID = "id"
 AXIS = 1
 INPLACE = True
-DROP_COLUMNS = ['Unnamed: 0','count','hate_speech','offensive_language','neither']
+DROP_COLUMNS = ['Unnamed: 0', 'count',
+                'hate_speech', 'offensive_language', 'neither']
 CLASS = "class"
 
 # Model training constants
@@ -50,5 +51,12 @@ METRICS = ["accuracy"]
 ACTIVATION = 'sigmoid'
 
 
+# Model Evaluation constants
+MODEL_EVALUATION_ARTIFACTS_DIR = "ModelEvaluationArtifacts"
+BEST_MODEL_DIR = "best_model"
+MODEL_EVALUATION_FILE_NAME = "loss.csv"
 
 
+MODEL_NAME = "model.h5"
+APP_HOST = "0.0.0.0"
+APP_PORT = 8080
