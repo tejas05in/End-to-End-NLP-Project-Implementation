@@ -112,7 +112,6 @@ sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --u
 
 
 
-
 # add them inside environment variables
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
